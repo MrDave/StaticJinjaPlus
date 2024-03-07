@@ -1,6 +1,6 @@
 # StaticJinjaPlus
 
-StaticJinjaPlus is a tool to build static sites using Jinja2
+StaticJinjaPlus is a tool to build static sites using [Jinja](https://jinja.palletsprojects.com/)
 
 ## How to install
 
