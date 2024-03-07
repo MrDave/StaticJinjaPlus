@@ -62,3 +62,11 @@ $ python main.py
 Rendering assets/style.css...
 Rendering index.html...
 ```
+
+## Example templates
+The repository has example templates to see how StaticJinjaPlus works.
+
+Run the following command and see your results in `./build`
+```commandline
+$ python main.py --srcpath example/templates
+```
