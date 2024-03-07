@@ -12,14 +12,14 @@ Using virtual environment [virtualenv/venv](https://docs.python.org/3/library/ve
 
 Install requirements:
 ```commandline
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Building sites
 
 To render html pages from templates, run
 ```commandline
-$ python main.py
+python main.py
 ```
 This will look in `./templates` for templates (files whose name does not start with `.` or `_`) and build them to `./build`
 
@@ -30,7 +30,7 @@ Rendering index.html...
 
 To watch for changes in the templates and recompile build files if changes happen, use `-w` or `--watch` argument
 ```commandline
-$ python main.py -w
+python main.py -w
 
 Rendering index.html...
 Watching '/home/mrdave/Python Projects/StaticJinjaPlus/templates' for changes...
@@ -45,7 +45,7 @@ To change the source and/or output paths use optional arguments
 
 Example:
 ```commandline
-$ python main.py --srcpath other_template_folder --outpath ./built/site
+python main.py --srcpath other_template_folder --outpath ./built/site
 
 Rendering index.html...
 ```
@@ -58,7 +58,8 @@ In this case StaticJinjaPlus will copy the assets to output folder keeping the s
 Building log will also include "rendering" the assets:
 
 ```commandline
-$ python main.py
+python main.py
+
 Rendering assets/style.css...
 Rendering index.html...
 ```
@@ -68,5 +69,5 @@ The repository has example templates to see how StaticJinjaPlus works.
 
 Run the following command and see your results in `./build`
 ```commandline
-$ python main.py --srcpath example/templates
+python main.py --srcpath example/templates
 ```
