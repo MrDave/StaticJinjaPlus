@@ -15,6 +15,24 @@ Install requirements:
 pip install -r requirements.txt
 ```
 
+To check that everything installed correctly try running the script with `--help` flag:
+```commandline
+python main.py --help
+```
+Output:
+```
+usage: main.py [-h] [-w] [--srcpath SRCPATH] [--outpath OUTPATH]
+
+Render HTML pages from Jinja2 templates
+
+options:
+  -h, --help         show this help message and exit
+  -w, --watch        Render the site, and re-render on changes to <srcpath>
+  --srcpath SRCPATH  The directory to look in for templates (defaults to './templates)'
+  --outpath OUTPATH  The directory to place rendered files in (defaults to './build')
+```
+Now you're all ready to build your static sites!
+
 ## Building sites
 
 To render html pages from templates, run:
