@@ -35,6 +35,8 @@ Now you're all ready to build your static sites!
 
 ## Building sites
 
+Note: see [Example templates](#example-templates) section for an example with sample templates.
+
 To render html pages from templates, run:
 ```commandline
 python main.py
@@ -42,10 +44,11 @@ python main.py
 This will look in `./templates` for templates (files whose name does not start with `.` or `_`) and build them to `./build`.
 
 You'll see a message about each template in the output:
-```commandline
+```
 Rendering index.html...
 ```
 
+### Watching for changes
 To watch for changes in the templates and recompile build files if changes happen, use `-w` or `--watch` argument.
 ```commandline
 python main.py -w
@@ -89,3 +92,6 @@ Run the following command and see your results in `./build`:
 ```commandline
 python main.py --srcpath example/templates
 ```
+
+![Example of index.html](https://imgur.com/Onr3aVM.jpg)
+Example render of `index.html`
