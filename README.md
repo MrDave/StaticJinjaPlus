@@ -4,7 +4,7 @@ StaticJinjaPlus is a tool to build static sites using [Jinja](https://jinja.pall
 
 ## How to install
 
-Python should already be installed. This project is tested on Python 3.11. You may use other versions as you will, but YMMV.
+Python should already be installed. This project requires Python3.7 or newer.
 
 Clone the repo / download code.
 
