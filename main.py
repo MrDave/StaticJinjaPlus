@@ -1,7 +1,17 @@
 import argparse
+import os
 from pathlib import Path
 
 from staticjinja import Site
+
+
+def get_context():
+    context = {}
+    prefix = "SJP_"
+    for key in os.environ.keys():
+        if key.startswith(prefix):
+            context[key.removeprefix(prefix).lower()] = os.environ[key]
+    return context
 
 
 def main():
@@ -36,7 +46,8 @@ def main():
     site = Site.make_site(
         searchpath=src_path,
         outpath=output_path,
-        staticpaths=[static_path]
+        staticpaths=[static_path],
+        contexts=[(".*.html", get_context)]
     )
 
     site.render(use_reloader=args.watch)

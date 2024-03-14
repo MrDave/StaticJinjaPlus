@@ -85,6 +85,25 @@ Rendering assets/style.css...
 Rendering index.html...
 ```
 
+### Using context
+It is possible to pass context for use in your templates by setting environmental variables named as you use them in the templates with the `"SJP_"` prefix.
+
+As an example, if your template includes `thing` variable, pass the `SJP_THING` env variable before building.
+
+```html
+<!-- html template -->
+<div class="container">
+    <h1>Welcome to our website!</h1>
+    <p>This is the homepage content. Replace it with your own.</p>
+    <p>The thing from context is {{ thing }}</p>
+</div>
+```
+```shell
+export SJP_THING="my_thing"
+python main.py
+```
+![](https://imgur.com/TEf3yJ6.png)
+
 ## Example templates
 The repository has example templates to see how StaticJinjaPlus works.
 
@@ -92,6 +111,14 @@ Run the following command and see your results in `./build`:
 ```commandline
 python main.py --srcpath example/templates
 ```
+```shell
+build
+├── about.html
+├── assets
+│  └── style.css
+├── faq.html
+└── index.html
 
+```
 ![Example of index.html](https://imgur.com/Onr3aVM.jpg)
 Example render of `index.html`
