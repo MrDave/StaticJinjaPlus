@@ -1,4 +1,4 @@
-FROM docker.io/python:3.11.3
+FROM docker.io/python:3.10.12-alpine
 
 ARG BASE_DIR=/opt/linters
 
@@ -17,8 +17,7 @@ ENV \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
     PIP_DEFAULT_TIMEOUT=100
 
-RUN RUN apk add --no-cache poetry
-ENV PATH="/root/.local/bin:${PATH}"
+RUN apk add --no-cache poetry
 
 WORKDIR ${BASE_DIR}
 COPY ./pyproject.toml ./poetry.lock ./
