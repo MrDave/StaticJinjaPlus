@@ -24,7 +24,7 @@
 Windows: .\venv\Scripts\activate
 MacOS/Linux: source venv/bin/activate
 
-Заппустите проверку:
+Запустите проверку:
 ```
 venv/bin/pip install -U pip setuptools
 venv/bin/pip install poetry
@@ -35,11 +35,14 @@ flake8  $(pwd)/StaticJinjaPlus
 
 
 ## I Have a Question
-  Заадел на будущее
+  Задел на будущее
 
 
-## Заадел на будущее
-  Заадел на будущее
+
+
+## Задел на будущее
+  Задел на будущее
+
 
 
 This project and everyone participating in it is governed by the
