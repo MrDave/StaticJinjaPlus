@@ -11,12 +11,13 @@
   Запуск локально обязательно в отдельном виртуальном окружении
 
 ```
-  python3 -m venv venv
+python3 -m venv venv
 ```
   
 Активируйте его. На разных операционных системах это делается разными командами:
-Windows: .\venv\Scripts\activate
-MacOS/Linux: source venv/bin/activate
+
+- Windows: `.\venv\Scripts\activate`
+- MacOS/Linux: `source venv/bin/activate`
 
 Запустите проверку:
 ```
