@@ -25,7 +25,7 @@ MacOS/Linux: source venv/bin/activate
 ```
 venv/bin/pip install -U pip setuptools
 venv/bin/pip install poetry
-cp ./pyproject.toml ./poetry.lock ./venv/bin
+cp ./.linters/pyproject.toml ./.linters/poetry.lock ./venv/bin
 flake8  $(pwd)/StaticJinjaPlus
 ```
 
