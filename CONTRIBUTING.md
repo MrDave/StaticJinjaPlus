@@ -1,10 +1,7 @@
-<!-- omit in toc -->
 # Разработчикам StaticJinjaPlus
 
-В этом документе собраны те рекомендации и инструкции, которые необходимы разработчикам StaticJinjaPlus, но бесполезны для прикладных программистов — пользователей StaticJinjaPlus, Вам интересен [README.md](https://github.com/MrDave/StaticJinjaPlus/blob/main/README.md).
+В этом документе собраны те рекомендации и инструкции, которые необходимы разработчикам StaticJinjaPlus, но бесполезны для прикладных программистов — пользователей StaticJinjaPlus. Если вы пользователь, а не разработчик StaticJinjaPlus — перейдите в [README.md](https://github.com/MrDave/StaticJinjaPlus/blob/main/README.md).
 
-
-<!-- omit in toc -->
 ## Оглавление
 
 - [Как запустить линтеры Python](#Как-запустить-линтеры-Python)
