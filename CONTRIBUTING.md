@@ -26,14 +26,3 @@ venv/bin/pip install poetry
 cp ./.linters/pyproject.toml ./.linters/poetry.lock ./venv/bin
 flake8  $(pwd)/StaticJinjaPlus
 ```
-
-
-
-
-
-
-This project and everyone participating in it is governed by the
-[StaticJinjaPlus Code of Conduct](https://github.com/SGKespace/StaticJinjaPlusblob/master/CODE_OF_CONDUCT.md).
-By participating, you are expected to uphold this code. Please report unacceptable behavior
-to <sgkond@gmail.com>.
-  
