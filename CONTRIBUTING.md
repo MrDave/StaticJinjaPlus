@@ -23,6 +23,11 @@ python3 -m venv venv
 ```
 venv/bin/pip install -U pip setuptools
 venv/bin/pip install poetry
-cp ./.linters/pyproject.toml ./.linters/poetry.lock ./venv/bin
-flake8  $(pwd)/StaticJinjaPlus
+cp ./StaticJinjaPlus/.linters/pyproject.toml ./StaticJinjaPlus/.linters/poetry.lock ./venv/bin
+venv/bin/poetry install --no-ansi
+venv/bin/flake8  $(pwd)/StaticJinjaPlus
 ```
+Пример результаата вывода
+<img width="632" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/d652d97e-5265-4735-8730-5b9c83f1c24d">
+
+
