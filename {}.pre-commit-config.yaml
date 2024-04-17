@@ -1,0 +1,13 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: py-linters
+        name: py-linters
+        entry: ../venv/bin/flake8  ../StaticJinjaPlus
+        language: system
+        pass_filenames: no
