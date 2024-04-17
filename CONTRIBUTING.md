@@ -6,6 +6,7 @@
 
 - [Как развернуть local-окружение](#Как-развернуть-local-окружение)
 - [Как запустить линтеры Python](#Как-запустить-линтеры-Python)
+- [Testing](#Testing)
 
 
 ## Как развернуть local-окружение
@@ -49,3 +50,25 @@ venv/bin/flake8  $(pwd)/StaticJinjaPlus
 <img width="632" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/d652d97e-5265-4735-8730-5b9c83f1c24d">
 
 
+## Testing
+
+The StaticJinjaPlus has 2 tests(collected 2). First show proper work with program, second fails. To run them use `pytest`
+
+```shell
+$ pytest
+=========================== test session starts ===========================
+platform win32 -- Python 3.11.5, pytest-8.1.1, pluggy-1.4.0
+collected 2 items
+rootdir: C:\Dev\StaticJinjaPlus
+test_sample.py .F                         [100%]
+================================= FAILURES ========================================
+___________________________________ test_wrong_answer ____________________________
+    def test_wrong_answer():
+>       assert func(10) == 5
+E       assert 11 == 5
+E        +  where 11 = func(10)
+
+test_sample.py:9: AssertionError
+
+FAILED test_sample.py::test_wrong_answer - assert 11 == 5
+=========================== 1 failed, 1 passed in 0.10s ===========================
