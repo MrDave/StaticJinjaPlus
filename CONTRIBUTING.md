@@ -41,7 +41,8 @@ python3 -m venv venv
 - MacOS/Linux: `source venv/bin/activate`
 
 Запустите проверку:
-```
+
+```shell
 venv/bin/pip install -U pip setuptools
 venv/bin/pip install poetry
 cp ./StaticJinjaPlus/.linters/pyproject.toml ./StaticJinjaPlus/.linters/poetry.lock ./venv/bin
