@@ -123,5 +123,3 @@ build
 ![Example of index.html](https://imgur.com/Onr3aVM.jpg)
 Example render of `index.html`
 
-
-```
