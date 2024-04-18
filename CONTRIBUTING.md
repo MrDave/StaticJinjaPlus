@@ -18,7 +18,7 @@
 В репозитории используются хуки pre-commit, чтобы автоматически запускать линтеры и автотесты. Перед началом разработки установите [pre-commit package manager](https://pre-commit.com).
 В корне репозитория запустите команду для настройки хуков:
 
-```
+```console
 pre-commit install
 ```
 
@@ -31,7 +31,7 @@ pre-commit install
 ## Как запустить линтеры Python
 Запуск локально обязательно в отдельном виртуальном окружении
 
-```
+```console
 python3 -m venv venv
 ```
   
@@ -42,7 +42,7 @@ python3 -m venv venv
 
 Запустите проверку:
 
-```shell
+```console
 venv/bin/pip install -U pip setuptools
 venv/bin/pip install poetry
 cp ./StaticJinjaPlus/.linters/pyproject.toml ./StaticJinjaPlus/.linters/poetry.lock ./venv/bin
