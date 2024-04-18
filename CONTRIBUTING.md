@@ -18,8 +18,8 @@
 В репозитории используются хуки pre-commit, чтобы автоматически запускать линтеры и автотесты. Перед началом разработки установите [pre-commit package manager](https://pre-commit.com).
 В корне репозитория запустите команду для настройки хуков:
 
-```console
-$ pre-commit install
+```PowerShell
+pre-commit install
 ```
 
 В последующем при коммите автоматически будут запускаться линтеры и автотесты. Есть линтеры будет недовольны, или автотесты сломаются, то коммит прервётся с ошибкой.
@@ -29,10 +29,11 @@ $ pre-commit install
 
 
 ## Как запустить линтеры Python
-Запуск локально обязательно в отдельном виртуальном окружении
+Запуск локально обязательно в отдельном виртуальном окружении вне скачанного репозитория
 
-```console
-python3 -m venv venv
+```shell
+StaticJinjaPlus sgk$ cd ..
+work sgk$ python3 -m venv venv
 ```
   
 Активируйте его. На разных операционных системах это делается разными командами:
@@ -42,12 +43,14 @@ python3 -m venv venv
 
 Запустите проверку:
 
-```console
-venv/bin/pip install -U pip setuptools
-venv/bin/pip install poetry
-cp ./StaticJinjaPlus/.linters/pyproject.toml ./StaticJinjaPlus/.linters/poetry.lock ./venv/bin
-venv/bin/poetry install --no-ansi
-venv/bin/flake8  $(pwd)/StaticJinjaPlus
+```PowerShell
+work sgk$ ls
+StaticJinjaPlus venv
+work sgk$ venv/bin/pip install -U pip setuptools
+work sgk$ venv/bin/pip install poetry
+work sgk$ cp ./StaticJinjaPlus/.linters/pyproject.toml ./StaticJinjaPlus/.linters/poetry.lock ./venv/bin
+work sgk$ venv/bin/poetry install --no-ansi
+work sgk$ venv/bin/flake8  $(pwd)/StaticJinjaPlus
 ```
 Пример результаата вывода
 <img width="632" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/d652d97e-5265-4735-8730-5b9c83f1c24d">
@@ -56,6 +59,10 @@ venv/bin/flake8  $(pwd)/StaticJinjaPlus
 ## Testing
 
 The StaticJinjaPlus has 2 tests(collected 2). First show proper work with program, second fails. To run them use `pytest`
+
+```PowerShell
+pip install -U pytest
+```
 
 ```shell
 $ pytest
