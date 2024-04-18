@@ -35,7 +35,7 @@ Now you're all ready to build your static sites!
 
 ## Building sites
 
-Note: see [Example templates](#example-templates) section for an example with sample templates.
+Note: see [Example templates](#example-templates) section for an example with sample templates. Rename the /templates_example folder to /templates to run test templates.
 
 To render html pages from templates, run:
 ```commandline
