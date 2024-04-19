@@ -52,8 +52,7 @@ StaticJinjaPlus$ ../venv/bin/pip install -U pip setuptools
 StaticJinjaPlus$ ../venv/bin/pip install poetry
 StaticJinjaPlus$ cp ./.linters/pyproject.toml ./.linters/poetry.lock ../venv/bin
 StaticJinjaPlus$  ../venv/bin/poetry install --no-ansi --directory=../venv/bin
-Creating virtualenv py-linters-iyfZ0h-u-py3.12 in /Users/sgk/Library/Caches/pypoetry/virtualenvs
-StaticJinjaPlus$ /Users/sgk/Library/Caches/pypoetry/virtualenvs/py-linters-iyfZ0h-u-py3.12/bin/flake8 ../StaticJinjaPlus
+StaticJinjaPlus$  ../venv/bin/flake8 ../StaticJinjaPlus
 ```
 Пример результаата вывода
 <img width="632" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/d652d97e-5265-4735-8730-5b9c83f1c24d">
