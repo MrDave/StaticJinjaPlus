@@ -19,7 +19,7 @@
 В корне репозитория запустите команду для настройки хуков:
 
 ```PowerShell
-pre-commit install
+StaticJinjaPlus$ pre-commit install
 ```
 
 В последующем при коммите автоматически будут запускаться линтеры и автотесты. Есть линтеры будет недовольны, или автотесты сломаются, то коммит прервётся с ошибкой.
@@ -32,8 +32,7 @@ pre-commit install
 Запуск локально обязательно в отдельном виртуальном окружении вне скачанного репозитория
 
 ```shell
-StaticJinjaPlus sgk$ cd ..
-work sgk$ python3 -m venv venv
+StaticJinjaPlus$ python3 -m venv ../venv
 ```
   
 Активируйте его. На разных операционных системах это делается разными командами:
@@ -44,13 +43,12 @@ work sgk$ python3 -m venv venv
 Запустите проверку:
 
 ```PowerShell
-work sgk$ ls
-StaticJinjaPlus venv
-work sgk$ venv/bin/pip install -U pip setuptools
-work sgk$ venv/bin/pip install poetry
-work sgk$ cp ./StaticJinjaPlus/.linters/pyproject.toml ./StaticJinjaPlus/.linters/poetry.lock ./venv/bin
-work sgk$ venv/bin/poetry install --no-ansi
-work sgk$ venv/bin/flake8  $(pwd)/StaticJinjaPlus
+StaticJinjaPlus$ ../venv/bin/pip install -U pip setuptools
+StaticJinjaPlus$ ../venv/bin/pip install poetry
+StaticJinjaPlus$ cp ./.linters/pyproject.toml ./.linters/poetry.lock ../venv/bin
+StaticJinjaPlus$  ../venv/bin/poetry install --no-ansi --directory=../venv/bin
+Creating virtualenv py-linters-iyfZ0h-u-py3.12 in /Users/sgk/Library/Caches/pypoetry/virtualenvs
+StaticJinjaPlus$ /Users/sgk/Library/Caches/pypoetry/virtualenvs/py-linters-iyfZ0h-u-py3.12/bin/flake8 ../StaticJinjaPlus
 ```
 Пример результаата вывода
 <img width="632" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/d652d97e-5265-4735-8730-5b9c83f1c24d">
