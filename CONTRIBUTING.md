@@ -10,6 +10,7 @@
    - [Testing](#Testing)
 
 
+
 ## Как развернуть local-окружение
 
 Для запуска ПО вам понадобятся консольный Git.
@@ -33,17 +34,18 @@ StaticJinjaPlus$ pre-commit install
 
 
 
+
 ## Как запустить линтеры Python
 Запуск локально обязательно в отдельном виртуальном окружении вне скачанного репозитория
 
-```shell
+```PowerShell
 StaticJinjaPlus$ python3 -m venv ../venv
 ```
   
 Активируйте его. На разных операционных системах это делается разными командами:
 
 - Windows: `.\venv\Scripts\activate`
-- MacOS/Linux: `source venv/bin/activate`
+- MacOS/Linux: `source ../venv/bin/activate`
 
 Запустите проверку:
 
@@ -56,6 +58,7 @@ StaticJinjaPlus$  ../venv/bin/flake8 ../StaticJinjaPlus
 ```
 Пример результаата вывода
 <img width="632" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/d652d97e-5265-4735-8730-5b9c83f1c24d">
+
 
 
 
