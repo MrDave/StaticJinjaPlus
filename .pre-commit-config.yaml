@@ -8,7 +8,7 @@ repos:
     hooks:
       - id: py-linters
         name: py-linters
-        entry: ../venv/bin/flake8  ../StaticJinjaPlus
+        entry: ../venv/bin/flake8  ./
         language: system
         pass_filenames: no
       - id: pytest
