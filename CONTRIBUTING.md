@@ -7,7 +7,7 @@
 - [Как развернуть local-окружение](#Как-развернуть-local-окружение)
    - [Хуки pre-commit](#Хуки-pre-commit)
    - [Как запустить линтеры Python](#Как-запустить-линтеры-Python)
-   - [Testing](#Testing)
+   - [Pytest](#Pytest)
 
 
 
@@ -16,6 +16,15 @@
 Для запуска ПО вам понадобятся консольный Git.
 
 Склонируйте репозиторий. Пройдите все меню ниже раздела `Как развернуть local-окружение`: установите все зависимости, включая зависимости для линтеров и для автотестов. Если Вы это не сделаете перед тем, как начнёте писать код, Вы не сможете работать с проектом.
+
+```PowerShell
+StaticJinjaPlus$ python3 -m venv ../venv
+```
+  
+Активируйте его. На разных операционных системах это делается разными командами:
+
+- Windows: `.\venv\Scripts\activate`
+- MacOS/Linux: `source ../venv/bin/activate`
 
 
 
@@ -36,18 +45,9 @@ StaticJinjaPlus$ pre-commit install
 
 
 ## Как запустить линтеры Python
-Запуск локально обязательно в отдельном виртуальном окружении вне скачанного репозитория
 
-```PowerShell
-StaticJinjaPlus$ python3 -m venv ../venv
-```
-  
-Активируйте его. На разных операционных системах это делается разными командами:
 
-- Windows: `.\venv\Scripts\activate`
-- MacOS/Linux: `source ../venv/bin/activate`
-
-Запустите проверку:
+Запустите проверку предварительно активировав виртуальное окружение:
 
 ```PowerShell
 StaticJinjaPlus$ ../venv/bin/pip install -U pip setuptools
@@ -64,13 +64,9 @@ StaticJinjaPlus$  ../venv/bin/flake8 ../StaticJinjaPlus
 
 
 
-## Testing
+## Pytest
 
-The StaticJinjaPlus has 2 tests(collected 2). First show proper work with program, second fails. To run them use `pytest`
-
-```PowerShell
-pip install -U pytest
-```
+pytest: помогает писать более качественные программы и  используется в этом проекте.
 
 ```shell
 $ pytest
