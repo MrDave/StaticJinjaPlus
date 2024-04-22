@@ -11,8 +11,8 @@ repos:
         entry: ../venv/bin/flake8  ../StaticJinjaPlus
         language: system
         pass_filenames: no
-      - id: pytest_
-        name: pytest_1
+      - id: pytest
+        name: pytest
         entry: pytest
         language: system
         pass_filenames: no
