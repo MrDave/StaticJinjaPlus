@@ -26,11 +26,20 @@ StaticJinjaPlus$ python3 -m venv ../venv
 - Windows: `.\venv\Scripts\activate`
 - MacOS/Linux: `source ../venv/bin/activate`
 
+Установите все зависимости:
+
+```PowerShell
+StaticJinjaPlus$ ../venv/bin/pip install -U pip setuptools
+StaticJinjaPlus$ ../venv/bin/pip install poetry
+StaticJinjaPlus$ cp ./.linters/pyproject.toml ./.linters/poetry.lock ../venv/bin
+StaticJinjaPlus$  ../venv/bin/poetry install --no-ansi --directory=../venv/bin
+StaticJinjaPlus$  pip install pre-commit
+```
 
 
 ## Хуки pre-commit
 
-В репозитории используются хуки pre-commit, чтобы автоматически запускать линтеры и автотесты. Перед началом разработки установите [pre-commit package manager](https://pre-commit.com).
+В репозитории используются хуки pre-commit, чтобы автоматически запускать линтеры и автотесты. 
 В корне репозитория запустите команду для настройки хуков:
 
 ```PowerShell
@@ -46,14 +55,9 @@ StaticJinjaPlus$ pre-commit install
 
 ## Как запустить линтеры Python
 
-
 Запустите проверку предварительно активировав виртуальное окружение:
 
 ```PowerShell
-StaticJinjaPlus$ ../venv/bin/pip install -U pip setuptools
-StaticJinjaPlus$ ../venv/bin/pip install poetry
-StaticJinjaPlus$ cp ./.linters/pyproject.toml ./.linters/poetry.lock ../venv/bin
-StaticJinjaPlus$  ../venv/bin/poetry install --no-ansi --directory=../venv/bin
 StaticJinjaPlus$  ../venv/bin/flake8 ./
 ```
 
