@@ -33,6 +33,15 @@ options:
 ```
 Now you're all ready to build your static sites!
 
+
+## Partials and ignored files
+
+A partial file is a file whose name begins with a "_".  Partial files are intended to be included in other files and are not rendered. If a partial file changes, it will trigger a rebuild if you are running  
+staticjinja watch. For example, for include: `{% include "_card.html" %}` to avoid losing changes.
+
+An ignored file is a file whose name begins with a "." . Ignored files are neither rendered nor used in rendering templates.
+
+
 ## Building sites
 
 Note: see [Example templates](#example-templates) section for an example with sample templates. Rename the /templates_example folder to /templates to run test templates.
