@@ -2,6 +2,17 @@
 
 StaticJinjaPlus is a tool to build static sites using [Jinja](https://jinja.palletsprojects.com/).
 
+# Content
+
+- [How to install](How-to-install)
+- [Building sites](Building-sites)
+  - [Watching for changes](Watching-for-changes)
+  - [Specifying templates or build paths](Specifying-templates-or-build-paths)
+  - [Using assets](Using-assets)
+  - [Using context](Using-context)
+  - [Как использовать extends и include](Как-использовать-extends-и-include)
+- [Example templates](Example-templates)
+
 ## How to install
 
 Python should already be installed. This project requires Python3.7 or newer.
@@ -32,14 +43,6 @@ options:
   --outpath OUTPATH  The directory to place rendered files in (defaults to './build')
 ```
 Now you're all ready to build your static sites!
-
-
-## Partials and ignored files
-
-A partial file is a file whose name begins with a "_".  Partial files are intended to be included in other files and are not rendered. If a partial file changes, it will trigger a rebuild if you are running  
-staticjinja watch. For example, for include: `{% include "_card.html" %}` to avoid losing changes.
-
-An ignored file is a file whose name begins with a "." . Ignored files are neither rendered nor used in rendering templates.
 
 
 ## Building sites
@@ -112,6 +115,25 @@ export SJP_THING="my_thing"
 python main.py
 ```
 ![](https://imgur.com/TEf3yJ6.png)
+
+
+## Как использовать extends и include
+Рассмотрим общие правила на примере include для файла _card.html  c вызовом из index.html.
+
+- _card.html:  имя файла имеет префикс «_» что объявляет его частичным, а значит при его изменении будут рендерится и все файлы в которых есть к нему обращение, а сам он не будет переносится в /build
+
+- Передача значений  переменных на примере page и  number.
+```
+{% with page="Домашняя", number=1 %}
+  {% include "_card.html" %}
+{% endwith %}
+
+```
+- Пример строки в файле _card.html с переменными page и  number.
+```
+<p>Вывод текста из файла _card.html методом include. Страница {{page}} Номер {{number}} </p>
+```
+
 
 ## Example templates
 The repository has example templates to see how StaticJinjaPlus works.
