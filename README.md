@@ -136,6 +136,8 @@ python main.py
 <p>Вывод текста из файла _card.html методом include. Страница {{page}} Номер {{number}} </p>
 ```
 
+<img width="738" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/6fbce118-e5ae-46b8-b5e5-7ab4df323562">
+
 
 ## Example templates
 The repository has example templates to see how StaticJinjaPlus works.
