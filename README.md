@@ -4,14 +4,14 @@ StaticJinjaPlus is a tool to build static sites using [Jinja](https://jinja.pall
 
 # Content
 
-- [How to install](How-to-install)
-- [Building sites](Building-sites)
-  - [Watching for changes](Watching-for-changes)
-  - [Specifying templates or build paths](Specifying-templates-or-build-paths)
-  - [Using assets](Using-assets)
-  - [Using context](Using-context)
-  - [Как использовать extends и include](Как-использовать-extends-и-include)
-- [Example templates](Example-templates)
+- [How to install](#How-to-install)
+- [Building sites](#Building-sites)
+  - [Watching for changes](#Watching-for-changes)
+  - [Specifying templates or build paths](#Specifying-templates-or-build-paths)
+  - [Using assets](#Using-assets)
+  - [Using context](#Using-context)
+  - [Как использовать extends и include](#Как-использовать-extends-и-include)
+- [Example templates](#Example-templates)
 
 ## How to install
 
