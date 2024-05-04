@@ -130,7 +130,7 @@ python main.py
 {% endwith %}
 ```
 
-- Пример строки в файле _card.html с переменными page и  number.
+- Пример кода в файле _card.html с переменными page и  number.
   
 ```html
 <p>Вывод текста из файла _card.html методом include. Страница {{page}} Номер {{number}} </p>
