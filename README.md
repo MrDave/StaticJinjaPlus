@@ -10,7 +10,7 @@ StaticJinjaPlus is a tool to build static sites using [Jinja](https://jinja.pall
   - [Specifying templates or build paths](#Specifying-templates-or-build-paths)
   - [Using assets](#Using-assets)
   - [Using context](#Using-context)
-  - [Как использовать extends и include](#Как-использовать-extends-и-include)
+  - [Шаблоны extends и include](#Шаблоны-extends-и-include)
 - [Example templates](#Example-templates)
 
 ## How to install
@@ -117,12 +117,24 @@ python main.py
 ![](https://imgur.com/TEf3yJ6.png)
 
 
-## Как использовать extends и include
-Рассмотрим общие правила на примере include для файла _card.html  c вызовом из index.html.
+## Шаблоны extends и include
 
-- `_card.html`:  имя файла имеет префикс «_» что объявляет его вспомогательным, а значит при его изменении будут рендерится и все файлы в которых есть к нему обращение, а сам он не будет переносится в /build
+- Фильтр 'extends' используется когда шаблоны должны иметь одинаковую базовую структуру, одни и те же блоки, при этом определять для отдельных блоков различное содержимое. Это позволяет сформировать единообразный стиль сайта, когда веб-страницы имеют одни и те же структурные элементы - меню, хедер, футер, сайдбары и так далее.
 
-- Передача значений  переменных на примере page и  number.
+Пример кода c вызовом из 'index.html'
+
+```html
+{% extends '_base.html' %}
+```
+
+- Фильтр 'include' позволяет добавить один шаблон в другой шаблон. Название подключаемого шаблона передается фильтру в качестве параметра.
+
+
+- Рассмотрим синтаксис на примере 'include' для файла '_card.html'  c вызовом из 'index.html'.
+
+    - `_card.html`:  имя файла имеет префикс «_» что объявляет его вспомогательным (подключаемым). При изменении вспомомгательного файла рендерится все файлы в которых есть к нему обращение.
+
+     - Передача значений переменных на примере `page` и  `number`.
 
 ```html
 {% with page="Домашняя", number=1 %}
@@ -130,7 +142,7 @@ python main.py
 {% endwith %}
 ```
 
-- Пример кода в файле _card.html с переменными page и  number.
+    - Пример кода в файле `_card.html` с переменными `page` и `number`.
   
 ```html
 <p>Вывод текста из файла _card.html методом include. Страница {{page}} Номер {{number}} </p>
