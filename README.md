@@ -2,6 +2,17 @@
 
 StaticJinjaPlus is a tool to build static sites using [Jinja](https://jinja.palletsprojects.com/).
 
+# Content
+
+- [How to install](#How-to-install)
+- [Building sites](#Building-sites)
+  - [Watching for changes](#Watching-for-changes)
+  - [Specifying templates or build paths](#Specifying-templates-or-build-paths)
+  - [Using assets](#Using-assets)
+  - [Using context](#Using-context)
+  - [Шаблоны extends и include](#Шаблоны-extends-и-include)
+- [Example templates](#Example-templates)
+
 ## How to install
 
 Python should already be installed. This project requires Python3.7 or newer.
@@ -32,6 +43,7 @@ options:
   --outpath OUTPATH  The directory to place rendered files in (defaults to './build')
 ```
 Now you're all ready to build your static sites!
+
 
 ## Building sites
 
@@ -103,6 +115,42 @@ export SJP_THING="my_thing"
 python main.py
 ```
 ![](https://imgur.com/TEf3yJ6.png)
+
+
+## Шаблоны extends и include
+
+- Вызов `extends` используется когда шаблоны должны иметь одинаковую базовую структуру, одну и ту же разбивку по блокам, но с разным содержимым для этих блоков. Это позволяет сформировать единообразный стиль сайта, когда веб-страницы имеют одни и те же структурные элементы - меню, хедер, футер, сайдбары и так далее.
+
+Пример кода:
+
+```html
+<!-- index.html file -->
+
+{% extends '_base.html' %}
+```
+
+- Вызов `include` добавляет в нужное место кусок шаблона. Название подключаемого шаблона передается в качестве параметра.
+  
+Пример вызова `include` для файла `_card.html` из `index.html`. Имя файла `_card.html` имеет префикс «_» что объявляет его вспомогательным (подключаемым). При изменении вспомогательного файла рендерятся все файлы в которых есть к нему обращения. В данной конструкции передадим еще две переменные `page` и  `number`.
+
+```html
+<!-- index.html file -->
+
+{% with page="Домашняя", number=1 %}
+  {% include "_card.html" %}
+{% endwith %}
+```
+
+Пример кода с переменными `page` и `number`.
+  
+```html
+<!-- _card.html file -->
+
+<p>Вывод текста из файла _card.html методом include. Страница {{page}} Номер {{number}} </p>
+```
+
+<img width="738" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/6fbce118-e5ae-46b8-b5e5-7ab4df323562">
+
 
 ## Example templates
 The repository has example templates to see how StaticJinjaPlus works.

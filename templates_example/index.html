@@ -5,4 +5,7 @@
 {% block content %}
     <h1>Welcome to our website!</h1>
     <p>This is the homepage content. Replace it with your own.</p>
+      {% with page="Домашняя", number=1 %}
+        {% include "_card.html" %}
+      {% endwith %}
 {% endblock %}

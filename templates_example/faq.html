@@ -5,4 +5,7 @@
 {% block content %}
     <h1>Frequently Asked Questions</h1>
     <p>This is the FAQ page content. Add your questions and answers here.</p>
+    {% with page="FAQ", number=3 %}
+        {% include "_card.html" %}
+      {% endwith %}
 {% endblock %}
