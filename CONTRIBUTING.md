@@ -54,11 +54,11 @@ StaticJinjaPlus$ pre-commit install
 <img width="725" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/9ce1b85c-fd69-45dd-9846-77c0fc2b3d22">
 
 
-
-
 ## Как запустить линтеры Python
 
-Запустите проверку предварительно активировав виртуальное окружение:
+Перед запуском линтеров предварительно активируйте виртуальное окружение:
+
+Запустите линтер Flake8:
 
 ```PowerShell
 StaticJinjaPlus$ flake8
@@ -68,7 +68,12 @@ StaticJinjaPlus$ flake8
 
 <img width="632" alt="image" src="https://github.com/SGKespace/StaticJinjaPlus/assets/55636018/d652d97e-5265-4735-8730-5b9c83f1c24d">
 
+Запуск линтер mypy:
 
+```PowerShell
+StaticJinjaPlus$ mypy main.py
+Success: no issues found in 1 source file
+```
 
 
 ## Pytest
