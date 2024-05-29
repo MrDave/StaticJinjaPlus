@@ -5,5 +5,6 @@ def func(x):
 def test_correct_answer():
     assert func(4) == 5
 
+
 def test_wrong_answer():
     assert func(10) == 5
