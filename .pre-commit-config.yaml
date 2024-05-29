@@ -8,11 +8,12 @@ repos:
     hooks:
       - id: py-linters
         name: py-linters
-        entry: ../venv/bin/flake8  ./
+        entry: ../venv/bin/flake8
         language: system
         pass_filenames: no
+
       - id: pytest
         name: pytest
-        entry: pytest
+        entry: ../venv/bin/pytest
         language: system
         pass_filenames: no
