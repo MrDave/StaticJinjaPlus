@@ -5,7 +5,7 @@ from pathlib import Path
 from staticjinja import Site
 
 
-def get_context():
+def get_context() -> dict[str, str]:
     context = {}
     prefix = "SJP_"
     for key in os.environ.keys():
@@ -14,7 +14,7 @@ def get_context():
     return context
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Render HTML pages from Jinja2 templates",
     )
@@ -46,7 +46,9 @@ def main():
     site = Site.make_site(
         searchpath=src_path,
         outpath=output_path,
-        staticpaths=[static_path],
+        staticpaths=[
+            str(static_path),
+        ],
         contexts=[(".*.html", get_context)],
     )
 
