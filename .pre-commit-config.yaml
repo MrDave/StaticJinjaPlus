@@ -17,3 +17,9 @@ repos:
         entry: ../venv/bin/pytest
         language: system
         pass_filenames: no
+
+      - id: mypy
+        name: mypy
+        entry: ../venv/bin/mypy main.py
+        language: system
+        pass_filenames: no
