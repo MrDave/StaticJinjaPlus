@@ -13,27 +13,30 @@
 
 ## Как развернуть local-окружение
 
-Для запуска ПО вам понадобятся консольный Git.
+Для разработки ПО и запуска автотестов вам понадобится набор инструментов. Инструкции по их установке ищите на официальных сайтах:
 
-Склонируйте репозиторий. Пройдите все меню ниже раздела `Как развернуть local-окружение`: установите все зависимости, включая зависимости для линтеров и для автотестов. Если Вы это не сделаете перед тем, как начнёте писать код, Вы не сможете работать с проектом.
+- [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Install pre-commit hooks manager](https://pre-commit.com/)
+- [Install pipx](https://github.com/pypa/pipx?tab=readme-ov-file#install-pipx)
+- [Install poetry with pipx](https://python-poetry.org/docs/#installing-with-pipx)
+
+Склонируйте репозиторий. Перейдите в корневой каталог репозитирия.
+
+Создайте виртуальное окружение:
 
 ```PowerShell
 StaticJinjaPlus$ python3 -m venv ../venv
 ```
-  
-Активируйте его. На разных операционных системах это делается разными командами:
+
+Активируйте виртуальное окружение. На разных операционных системах это делается разными командами:
 
 - Windows: `.\venv\Scripts\activate`
 - MacOS/Linux: `source ../venv/bin/activate`
 
-Установите все зависимости:
+Установите все зависимости, включая библиотеки для разработки и отладки:
 
 ```PowerShell
-StaticJinjaPlus$ ../venv/bin/pip install -U pip setuptools
-StaticJinjaPlus$ ../venv/bin/pip install poetry
-StaticJinjaPlus$ cp ./.linters/pyproject.toml ./.linters/poetry.lock ../venv/bin
-StaticJinjaPlus$  ../venv/bin/poetry install --no-ansi --directory=../venv/bin
-StaticJinjaPlus$  pip install pre-commit
+StaticJinjaPlus$ pip install -r requirements-dev.txt
 ```
 
 
@@ -58,7 +61,7 @@ StaticJinjaPlus$ pre-commit install
 Запустите проверку предварительно активировав виртуальное окружение:
 
 ```PowerShell
-StaticJinjaPlus$  ../venv/bin/flake8 ./
+StaticJinjaPlus$ flake8
 ```
 
 Пример результата вывода
@@ -70,7 +73,9 @@ StaticJinjaPlus$  ../venv/bin/flake8 ./
 
 ## Pytest
 
-pytest: помогает писать более качественные программы и  используется в этом проекте.
+Pytest используется для написания и запуска автотестов.
+
+Запустите автотесты предварительно активировав виртуальное окружение:
 
 ```shell
 $ pytest
