@@ -17,8 +17,6 @@
 
 - [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [Install pre-commit hooks manager](https://pre-commit.com/)
-- [Install pipx](https://github.com/pypa/pipx?tab=readme-ov-file#install-pipx)
-- [Install poetry with pipx](https://python-poetry.org/docs/#installing-with-pipx)
 
 Склонируйте репозиторий. Перейдите в корневой каталог репозитирия.
 
