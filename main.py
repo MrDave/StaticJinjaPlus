@@ -16,7 +16,7 @@ def get_context() -> dict[str, str]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Render HTML pages from Jinja2 templates",
+        description="Render HTML pages from Jinja templates",
     )
     parser.add_argument(
         "-w",
